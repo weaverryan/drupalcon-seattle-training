@@ -2,6 +2,7 @@
 
 namespace Drupal\coffee_shop\Controller;
 
+use Drupal\coffee_shop\Service\Barista;
 use Drupal\Core\Controller\ControllerBase;
 
 class CoffeeController extends ControllerBase {
@@ -11,7 +12,8 @@ class CoffeeController extends ControllerBase {
         ->get('type');
     }
 
-    $text = sprintf('Ding! Your delicious %s is ready!', $type);
+    $barista = new Barista();
+    $text = $barista->prepareDrink($type);
 
     return [
       '#type' => 'markup',
