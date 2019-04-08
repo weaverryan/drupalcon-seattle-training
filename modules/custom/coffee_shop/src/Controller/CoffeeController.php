@@ -12,7 +12,8 @@ class CoffeeController extends ControllerBase {
         ->get('type');
     }
 
-    $barista = new Barista();
+    $barista =  \Drupal::getContainer()
+      ->get('coffee_shop.barista');
     $text = $barista->prepareDrink($type);
 
     return [
