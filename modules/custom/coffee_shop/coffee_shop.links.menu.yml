@@ -1,0 +1,7 @@
+coffee_shop.default_form:
+  title: 'Coffee Form'
+  route_name: coffee_shop.default_form
+  description: 'Help brew delicious coffee'
+  parent: system.admin_config_system
+  weight: 99
+
