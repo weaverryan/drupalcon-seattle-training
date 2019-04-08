@@ -2,3 +2,7 @@ services:
   coffee_shop.barista:
     class: Drupal\coffee_shop\Service\Barista
     arguments: ['@config.factory']
+
+  coffee_shop.coffee_drinker_subscriber:
+    class: Drupal\coffee_shop\EventSubscriber\CoffeeDrinkerSubscriber
+    arguments: []
