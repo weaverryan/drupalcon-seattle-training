@@ -2,10 +2,12 @@
 
 namespace Drupal\coffee_shop\Service;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
+
 class Barista {
   private $configFactory;
 
-  public function __construct($configFactory) {
+  public function __construct(ConfigFactoryInterface $configFactory) {
     $this->configFactory = $configFactory;
   }
 
