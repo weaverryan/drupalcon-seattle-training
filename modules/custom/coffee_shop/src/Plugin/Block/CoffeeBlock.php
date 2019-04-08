@@ -15,6 +15,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class CoffeeBlock extends BlockBase implements ContainerFactoryPluginInterface {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+  }
 
   /**
    * {@inheritdoc}
