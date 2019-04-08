@@ -18,8 +18,11 @@ class CoffeeBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $barista =  \Drupal::getContainer()
+      ->get('coffee_shop.barista');
+
     $build = [];
-    $build['coffee_block']['#markup'] = 'Implement CoffeeBlock.';
+    $build['coffee_block']['#markup'] = $barista->prepareDrink();
 
     return $build;
   }
