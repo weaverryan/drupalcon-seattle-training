@@ -3,6 +3,8 @@
 namespace Drupal\coffee_shop\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a 'CoffeeBlock' block.
@@ -12,7 +14,7 @@ use Drupal\Core\Block\BlockBase;
  *  admin_label = @Translation("Coffee block"),
  * )
  */
-class CoffeeBlock extends BlockBase {
+class CoffeeBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * {@inheritdoc}
@@ -27,4 +29,7 @@ class CoffeeBlock extends BlockBase {
     return $build;
   }
 
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new self($configuration, $plugin_id, $plugin_definition);
+  }
 }
