@@ -3,7 +3,12 @@
 namespace Drupal\coffee_shop\Service;
 
 class Barista {
-  public function prepareDrink($type) {
+  public function prepareDrink($type = null) {
+    if ($type === null) {
+      $type = $this->config('coffee_shop.default')
+        ->get('type');
+    }
+
     $sizes = ['small', 'medium', 'large', 'scary huge'];
     $statuses = ['for here', 'to go', 'to sip while standing pensively'];
 
