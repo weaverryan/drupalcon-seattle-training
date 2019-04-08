@@ -3,9 +3,15 @@
 namespace Drupal\coffee_shop\Service;
 
 class Barista {
+  private $configFactory;
+
+  public function __construct($configFactory) {
+    $this->configFactory = $configFactory;
+  }
+
   public function prepareDrink($type = null) {
     if ($type === null) {
-      $type = $this->config('coffee_shop.default')
+      $type = $this->configFactory->get('coffee_shop.default')
         ->get('type');
     }
 
