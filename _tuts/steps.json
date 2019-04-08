@@ -51,8 +51,8 @@
             "description": null
         },
         {
-            "id": "service-create-use-songgenerator",
-            "name": "Service: Create & use SongGenerator",
+            "id": "service-create-and-use-barista",
+            "name": "Service: Create and use Barista",
             "description": null
         },
         {
@@ -151,5 +151,5 @@
             "description": null
         }
     ],
-    "sha": "20acc29f7e160229fb9481159af5d65a7b38e593"
+    "sha": "6e5e4ba3959e5cc47083ff22fef1fc91e2e65e4f"
 }
