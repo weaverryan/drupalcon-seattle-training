@@ -6,3 +6,5 @@ services:
   coffee_shop.coffee_drinker_subscriber:
     class: Drupal\coffee_shop\EventSubscriber\CoffeeDrinkerSubscriber
     arguments: []
+    tags:
+      - { name: event_subscriber }
