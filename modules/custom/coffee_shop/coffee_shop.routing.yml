@@ -1,0 +1,4 @@
+coffee_shop.coffee.brew:
+  path: /coffee/brew
+  requirements:
+    _permission: 'access content'
